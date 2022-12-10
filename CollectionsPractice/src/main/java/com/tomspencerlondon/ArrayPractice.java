@@ -31,6 +31,10 @@ public class ArrayPractice {
     printArray(intArray);
     printArray(doubleArray);
     printArray(characterArray);
+
+    printArrayAllDataTypes(intArray);
+    printArrayAllDataTypes(doubleArray);
+    printArrayAllDataTypes(characterArray);
   }
 
   public static void printArray(String[] array) {
@@ -55,5 +59,23 @@ public class ArrayPractice {
     for (Character element : array) {
       System.out.print(element);
     }
+  }
+
+  public static <E> void printArrayAllDataTypes(E[] inputArray) {
+    System.out.println("Generics");
+
+    System.out.println(inputArray[0].getClass() + "\t");
+
+    for (E element : inputArray) {
+      System.out.println(element + ", ");
+    }
+
+    System.out.println();
+
+    for (int i = 0; i < inputArray.length; i++) {
+      System.out.print(i + ": " + inputArray[i] + ", ");
+    }
+
+    System.out.println();
   }
 }
