@@ -7,7 +7,8 @@ public class Lecture2 {
 
   public static void main(String[] args) {
 //    range();
-    rangeIteratingLists();
+//    rangeIteratingLists();
+    intStreamIterate();
   }
 
   public static void range() {
@@ -33,6 +34,8 @@ public class Lecture2 {
   }
 
   public static void intStreamIterate() {
-
+    IntStream.iterate(0, operand -> operand + 1)
+        .limit(20)
+        .forEach(System.out::println);
   }
 }
