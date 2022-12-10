@@ -27,7 +27,8 @@ public class Lecture2 {
 
     IntStream.range(0, people.size())
         .forEach(i -> {
-          System.out.println(people.get(i));
+          Person person = people.get(i);
+          System.out.println(person);
         });
   }
 
