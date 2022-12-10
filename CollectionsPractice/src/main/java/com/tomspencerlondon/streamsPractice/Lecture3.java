@@ -1,0 +1,24 @@
+package com.tomspencerlondon.streamsPractice;
+
+import com.google.common.collect.ImmutableList;
+import java.util.Comparator;
+import java.util.List;
+import org.checkerframework.checker.units.qual.min;
+
+public class Lecture3 {
+
+  public static void main(String[] args) {
+    min();
+  }
+
+  public static void min() {
+    List<Integer> numbers = ImmutableList.of(1, 2, 3, 100, 23, 93, 99);
+
+    Integer min = numbers
+        .stream()
+        .min(Comparator.naturalOrder())
+        .get();
+
+    System.out.println(min);
+  }
+}
