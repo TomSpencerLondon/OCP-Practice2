@@ -1,6 +1,7 @@
 package com.tomspencerlondon;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedListPractice {
 
@@ -21,5 +22,18 @@ public class LinkedListPractice {
     linkList2.add("kiwi");
     linkList2.add("orange");
     System.out.println(linkList2);
+
+    ListIterator<String> listIterator = linkedList1.listIterator();
+
+    System.out.println();
+    while(listIterator.hasNext()) {
+      System.out.print(listIterator.next() + ", ");
+    }
+
+    System.out.println();
+
+    while(listIterator.hasPrevious()) {
+      System.out.print(listIterator.previous() + ", ");
+    }
   }
 }
