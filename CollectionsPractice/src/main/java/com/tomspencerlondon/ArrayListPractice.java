@@ -18,6 +18,13 @@ public class ArrayListPractice {
     }
 
     System.out.println(arrayList);
+
+    arrayList.add("John");
+    arrayList.add("Peter");
+
+    System.out.println("get(0) " + arrayList.get(0));
+    System.out.println(arrayList.size());
+    System.out.println(arrayList);
   }
 
 }
