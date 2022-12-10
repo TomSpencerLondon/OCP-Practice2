@@ -12,7 +12,7 @@ public class Lecture5 {
   public static List<PersonDto> firstMapping() {
     return MockData.getPeople()
         .stream()
-        .map(p -> new PersonDto(p.getName(), p.getAge()))
+        .map(PersonDto::map)
         .collect(Collectors.toList());
   }
 

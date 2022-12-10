@@ -10,6 +10,10 @@ public class PersonDto {
     this.age = age;
   }
 
+  static PersonDto map(Person p) {
+    return new PersonDto(p.getName(), p.getAge());
+  }
+
   @Override
   public String toString() {
     return "PersonDto{" + "name='" + name + '\'' + ", age=" + age + '}';
