@@ -25,11 +25,11 @@ public class Lecture3 {
   public static void max() {
     List<Integer> numbers = ImmutableList.of(1, 2, 3, 100, 23, 93, 99);
 
-    Integer min = numbers
+    Integer max = numbers
         .stream()
         .max(Comparator.naturalOrder())
         .get();
 
-    System.out.println(min);
+    System.out.println(max);
   }
 }
