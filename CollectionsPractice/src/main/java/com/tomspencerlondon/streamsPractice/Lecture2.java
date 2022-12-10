@@ -6,7 +6,8 @@ import java.util.stream.IntStream;
 public class Lecture2 {
 
   public static void main(String[] args) {
-    range();
+//    range();
+    rangeIteratingLists();
   }
 
   public static void range() {
@@ -23,6 +24,11 @@ public class Lecture2 {
 
   public static void rangeIteratingLists() {
     List<Person> people = MockData.getPeople();
+
+    IntStream.range(0, people.size())
+        .forEach(i -> {
+          System.out.println(people.get(i));
+        });
   }
 
   public static void intStreamIterate() {
