@@ -1,0 +1,9 @@
+Mon,Amadeus,Drama,160 Mins.,1984,14.83;
+Tue,Birdman,Drama,139 Mins.,1998,11.3;
+Wed,Batman,Action,126 Mins.,1989,10.15;
+Thurs,Scarface,Action,111 Mins.,2001,10.23;
+Fri,Cinderella, Science Fiction,117 Mins.,1982,11.98;
+Sat,Shadowlands,Drama,133 Mins.,1993,9.89;
+Sat,Shrek,Animation,93 Mins,2001,15.99;
+Sat,Snatch,Action,103 Mins,2001,20.67;
+Sun,Rocky,Fantasy,178 Mins,2001,25.87;
