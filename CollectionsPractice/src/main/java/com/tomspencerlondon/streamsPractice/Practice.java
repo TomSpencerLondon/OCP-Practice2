@@ -2,10 +2,27 @@ package com.tomspencerlondon.streamsPractice;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Practice {
 
   public static void main(String[] args) {
+//    imperativeMyApproach();
+//    Lecture1 lecture1 = new Lecture1();
+//
+//    lecture1.imperativeApproach();
+
+    declarativeApproach();
+  }
+
+  private static void declarativeApproach() {
+    MockData.getPeople().stream()
+        .filter(p -> p.getAge() <= 18)
+        .toList()
+        .forEach(System.out::println);
+  }
+
+  private static void imperativeMyApproach() {
     List<Person> people = MockData.getPeople();
 
     ArrayList<Person> result = new ArrayList<>();
@@ -68,5 +85,24 @@ class MockData {
 
   public static List<Person> getPeople() {
     return people;
+  }
+}
+
+class Lecture1 {
+  
+  public void imperativeApproach() {
+    List<Person> people = MockData.getPeople();
+
+    ArrayList<Person> youngPeople = new ArrayList<>();
+
+    for (Person person : people) {
+      if (person.getAge() <= 18) {
+        youngPeople.add(person);
+      }
+    }
+
+    for (Person young : youngPeople) {
+      System.out.print(young.getAge() + " ");
+    }
   }
 }
