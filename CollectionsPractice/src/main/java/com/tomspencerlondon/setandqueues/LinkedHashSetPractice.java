@@ -35,5 +35,6 @@ public class LinkedHashSetPractice {
     System.out.println(linkedHashSet.size());
     linkedHashSet.clear();
     System.out.println(linkedHashSet.size());
+
   }
 }

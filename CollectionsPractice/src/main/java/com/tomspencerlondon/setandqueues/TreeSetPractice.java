@@ -1,13 +1,14 @@
 package com.tomspencerlondon.setandqueues;
 
 import java.util.Arrays;
-import java.util.Set;
+import java.util.NavigableSet;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class TreeSetPractice {
 
   public static void main(String[] args) {
-    Set<String> treeSet = new TreeSet<>();
+    SortedSet<String> treeSet = new TreeSet<>();
 
     treeSet.add("c");
     treeSet.add("b");
@@ -21,5 +22,7 @@ public class TreeSetPractice {
       System.out.println(value);
     }
 
+    System.out.println(treeSet.first());
+    System.out.println(treeSet.last());
   }
 }
