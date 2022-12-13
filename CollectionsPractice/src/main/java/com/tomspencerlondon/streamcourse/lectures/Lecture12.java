@@ -15,7 +15,7 @@ public class Lecture12 {
         .collect(
             ArrayList::new,
             ArrayList::add,
-            (list1, list2) -> list1.addAll(list2));
+            ArrayList::addAll);
 //        .collect(Collectors.toList());
 
     emails.forEach(System.out::println);

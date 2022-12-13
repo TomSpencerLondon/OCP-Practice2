@@ -5,8 +5,8 @@ import com.google.common.collect.Lists;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.Test;
+
 
 public class Lecture10 {
 
@@ -15,11 +15,6 @@ public class Lecture10 {
       Lists.newArrayList("John", "Alesha", "Andre"),
       Lists.newArrayList("Susy", "Ali")
   );
-
-  @Before
-  public void setUp() {
-    System.out.println(arrayListOfNames);
-  }
 
   @Test
   public void withoutFlatMap() throws Exception {

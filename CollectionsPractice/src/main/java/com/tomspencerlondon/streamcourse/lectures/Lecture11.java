@@ -3,8 +3,7 @@ package com.tomspencerlondon.streamcourse.lectures;
 import com.google.common.collect.ImmutableList;
 import java.util.List;
 import java.util.stream.Collectors;
-import mockdata.MockData;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class Lecture11 {
 

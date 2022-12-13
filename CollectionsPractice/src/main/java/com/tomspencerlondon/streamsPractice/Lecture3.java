@@ -3,7 +3,6 @@ package com.tomspencerlondon.streamsPractice;
 import com.google.common.collect.ImmutableList;
 import java.util.Comparator;
 import java.util.List;
-import org.checkerframework.checker.units.qual.min;
 
 public class Lecture3 {
 

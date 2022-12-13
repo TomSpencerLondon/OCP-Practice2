@@ -1,15 +1,15 @@
 package com.tomspencerlondon.streamcourse.lectures;
 
 
-import beans.Car;
+import com.tomspencerlondon.streamcourse.beans.Car;
+import com.tomspencerlondon.streamcourse.mockdata.MockData;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import mockdata.MockData;
 import org.assertj.core.util.Lists;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class Lecture8 {
 
@@ -41,9 +41,12 @@ public class Lecture8 {
         );
 
     Map<String, Long> counting = names.stream()
-        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        .collect(Collectors.groupingBy(
+            Function.identity(),
+            Collectors.counting()));
 
-    counting.forEach((name, count) -> System.out.println(name + " > " + count));
+    counting.forEach((name, count) ->
+        System.out.println(name + " > " + count));
   }
 
 }

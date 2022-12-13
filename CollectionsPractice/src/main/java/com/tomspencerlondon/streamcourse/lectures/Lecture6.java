@@ -1,10 +1,8 @@
 package com.tomspencerlondon.streamcourse.lectures;
 
-
-import com.google.common.collect.Lists;
 import java.util.Arrays;
 import java.util.function.Predicate;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class Lecture6 {
 
