@@ -1,5 +1,7 @@
 package com.tomspencerlondon.cards;
 
+import static java.util.Arrays.asList;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +13,13 @@ public class Deal {
       System.out.println("Usage: Deal hands cards");
       return;
     }
+
+    List<String> list = new ArrayList<>(asList("a", "b", "c", "d"));
+
+    Collections.sort(list);
+    Collections.shuffle(list);
+    Collections.reverse(list);
+    Collections.rotate(list, 1);
 
     int numHands = Integer.parseInt(args[0]);
     int cardsPerHand = Integer.parseInt(args[1]);
