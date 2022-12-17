@@ -18,7 +18,7 @@ public class CarpetLambda {
     Carpet area = (l, w) -> l * w;
     CalcPrice lp = (sqm) -> 10 * sqm;
     CalcPrice cp = (sqm) -> 15 * sqm;
-    CalcTotal totalPrice = (l, c) -> l + c;
+    CalcTotal totalPrice = Double::sum;
 
     double calcArea = area.calcArea(2.0, 4.0);
     double labourcost = lp.calc(calcArea);
