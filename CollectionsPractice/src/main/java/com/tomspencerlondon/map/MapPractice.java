@@ -13,7 +13,7 @@ public class MapPractice {
     map.put(303, "See Other");
     map.put(404, "Not found");
     map.put(500, "Internal Server Error");
-    map.put(500, "Internal Server Error");
+    map.put(501, "Internal Server Error");
 
     System.out.println("Map entries");
 
@@ -22,6 +22,8 @@ public class MapPractice {
     }
 
     System.out.println();
+
+    System.out.println(map.get(404));
   }
 
 }
