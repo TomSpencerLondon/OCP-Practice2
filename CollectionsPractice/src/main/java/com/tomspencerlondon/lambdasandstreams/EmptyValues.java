@@ -35,14 +35,22 @@ public class EmptyValues {
 
     cities = Arrays.asList("London", "Bath", null, "Bristol");
     System.out.println("Print how many are not null" +
-        cities.stream().filter(str -> str != null).count()
+        cities.stream().filter(Objects::nonNull).count()
         );
-    cities.stream().filter(str -> str != null)
+    cities.stream().filter(Objects::nonNull)
         .forEach(System.out::println);
 
     System.out.println("Print how many are null " +
         cities.stream().filter(Objects::isNull).count()
     );
+
+    cities = Arrays.asList("London", "Bath", " ", "", null, "Bristol");
+
+    System.out.println("All the not null and the not empties");
+    cities.stream()
+        .filter(Objects::nonNull)
+        .filter(e -> !e.isEmpty())
+        .forEach(System.out::println);
   }
 
 }
