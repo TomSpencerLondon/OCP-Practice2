@@ -51,6 +51,28 @@ public class EmptyValues {
         .filter(Objects::nonNull)
         .filter(e -> !e.isEmpty())
         .forEach(System.out::println);
+
+    cities = Arrays.asList("London", "Bath","   ", " ", "", null, "Bristol");
+    System.out.println("How many blanks: " +
+        cities.stream()
+            .filter(Objects::nonNull)
+            .filter(String::isBlank).count());
+    cities = Arrays.asList("London", "Bath","   ", " ", "", null, "Bristol");
+
+    System.out.println("How many empty: " +
+        cities.stream().filter(Objects::nonNull)
+            .filter(String::isEmpty).count());
+
+    cities = Arrays.asList("London", "Bath","   ", " ", "", null, "Bristol");
+
+    System.out.println("How many null: " +
+        cities.stream().filter(Objects::isNull).count());
+
+    System.out.println("How many not null: " +
+        cities.stream()
+            .filter(Objects::nonNull)
+            .count()
+        );
   }
 
 }
