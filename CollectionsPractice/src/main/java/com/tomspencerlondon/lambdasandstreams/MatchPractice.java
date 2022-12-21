@@ -1,7 +1,6 @@
 package com.tomspencerlondon.lambdasandstreams;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MatchPractice {
 
