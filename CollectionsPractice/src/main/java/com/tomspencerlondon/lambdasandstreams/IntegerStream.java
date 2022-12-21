@@ -13,7 +13,6 @@ public class IntegerStream {
     System.out.println("Reduced to one value by using multiply " + reduced);
 
     double product = 1;
-
     for (double i : integers) {
       product = product * i;
     }
