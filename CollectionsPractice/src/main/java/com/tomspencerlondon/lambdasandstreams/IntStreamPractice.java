@@ -16,15 +16,5 @@ public class IntStreamPractice {
     System.out.println(stream.summaryStatistics());
 //    System.out.println(stream.sum());
 
-    int[] ints = new Random().ints(52, 1, 10).toArray();
-
-    System.out.println(Arrays.toString(ints));
-
-    IntStream stream2 = Arrays.stream(ints);
-
-    System.out.println(stream2.sum());
-
-    System.out.println(Arrays.stream(ints).average().orElse(1.0));
-
   }
 }
