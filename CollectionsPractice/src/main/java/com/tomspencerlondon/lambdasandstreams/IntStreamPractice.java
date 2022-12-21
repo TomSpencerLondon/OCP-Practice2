@@ -13,5 +13,7 @@ public class IntStreamPractice {
 
     System.out.println("Sum: ----");
     System.out.println(stream.summaryStatistics());
+//    System.out.println(stream.sum());
+
   }
 }
