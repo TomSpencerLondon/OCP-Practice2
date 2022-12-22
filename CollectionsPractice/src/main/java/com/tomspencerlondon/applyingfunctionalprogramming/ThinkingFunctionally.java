@@ -62,6 +62,28 @@ public class ThinkingFunctionally {
 //    Associative property
 //          - A mathematical principle that proves that the grouping of values
 //            does not affect the result
+
+//    java.util.function.Function interface
+//        - compose
+//     Function compose(Function before) {
+//        return t -> apply(before.apply(t));
+//    }
+//    java.util.Function interface
+//        - andThen
+//    Function andThen(Function after) {
+//       return t -> after.apply(apply(t));
+//    }
+//    f.compose(g) is same as g.andThen(f)
+//    java.util.function.Function interface
+//          - Identity
+//    Function identity() {
+//      return t -> t;
+//    }
+//    Predicate
+//        - T -> Boolean
+//    Compose predicates
+//        - and()
+//        - or()
   }
 
 }
