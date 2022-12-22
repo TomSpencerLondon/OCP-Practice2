@@ -15,6 +15,13 @@ public class CurryingTaxEample {
 
     System.out.println(calculateNationalTax.apply(100.0));
     System.out.println(calculateInternationalTax.apply(100.0));
+
+    Function<Short, Function<Integer, Function<Long, Long>>> f =
+        s -> i -> l -> s + i + l;
+    Long result = f.apply((short) 1).apply(1).apply((long) 1);
+
+    System.out.println(result);
+
   }
 
 }
