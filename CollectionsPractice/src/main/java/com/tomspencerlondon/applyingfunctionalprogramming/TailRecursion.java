@@ -8,7 +8,11 @@ public class TailRecursion {
 
   public static void main(String[] args) {
 //    System.out.println(sum(Arrays.asList(1, 2, 3, 4)));
-    System.out.println(sumTail(Arrays.asList(1, 2, 3, 4), 0));
+    System.out.println(sumTail(Arrays.asList(1, 2, 3, 4)));
+  }
+
+  private static int sumTail(List<Integer> list) {
+    return sumTail(list, 0);
   }
 
   private static int sumTail(List<Integer> list, int acc) {
