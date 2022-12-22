@@ -1,6 +1,7 @@
 package com.tomspencerlondon.applyingfunctionalprogramming;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
 import javax.xml.validation.Validator;
@@ -34,10 +35,16 @@ public class ThinkingFunctionally {
 
     Function<Integer, Integer> g = x -> x;
     Function<Integer, Integer> f = x -> x + 1;
+//
+//    for (int i = 0; i < n; i++) {
+//      g = g.compose(f);
+//    }
+//
+//    System.out.println(g.apply(0));
 
-    for (int i = 0; i < n; i++) {
-      g = g.compose(f);
-    }
+    g = Collections.nCopies(n, f)
+        .stream()
+        .reduce(g, Function::compose);
 
     System.out.println(g.apply(0));
   }
