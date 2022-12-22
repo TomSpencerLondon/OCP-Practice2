@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TailRecursion {
+  // Non-tail recursive functions use stack to remember the state
+//  Tail recursive functions use accumulators to remember state
 
   public static void main(String[] args) {
 //    System.out.println(sum(Arrays.asList(1, 2, 3, 4)));
