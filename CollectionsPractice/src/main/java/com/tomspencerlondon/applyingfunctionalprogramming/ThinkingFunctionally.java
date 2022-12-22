@@ -2,6 +2,7 @@ package com.tomspencerlondon.applyingfunctionalprogramming;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import javax.xml.validation.Validator;
 
 public class ThinkingFunctionally {
@@ -28,6 +29,17 @@ public class ThinkingFunctionally {
 //    Not Java 8 features but functional concepts
 //    Loyalty Program - Wired Brain Coffee
 //
+
+    int n = 10;
+
+    Function<Integer, Integer> g = x -> x;
+    Function<Integer, Integer> f = x -> x + 1;
+
+    for (int i = 0; i < n; i++) {
+      g = g.compose(f);
+    }
+
+    System.out.println(g.apply(0));
   }
 
 }
