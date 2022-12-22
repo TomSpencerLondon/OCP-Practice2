@@ -22,8 +22,8 @@ public class CurryingTaxEample {
 
     System.out.println(result);
 
+//  In curried functions order matters
   }
-
 }
 
 class Tax {
