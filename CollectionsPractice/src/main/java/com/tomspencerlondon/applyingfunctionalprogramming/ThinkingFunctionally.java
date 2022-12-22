@@ -47,6 +47,21 @@ public class ThinkingFunctionally {
         .reduce(g, Function::compose);
 
     System.out.println(g.apply(0));
+
+//    Function becomes a high order function when
+//          - It takes a function as its input or argument
+//          - It returns a function as its output
+//          - It does both
+//    High-order functions promote:
+//          - Abstraction
+//          - Composition
+//          - Reusing of behaviour
+//    Composition
+//          - Nesting functions, passing the result of one as the input of the next
+//          - Composed functions are applied in inverse order
+//    Associative property
+//          - A mathematical principle that proves that the grouping of values
+//            does not affect the result
   }
 
 }
