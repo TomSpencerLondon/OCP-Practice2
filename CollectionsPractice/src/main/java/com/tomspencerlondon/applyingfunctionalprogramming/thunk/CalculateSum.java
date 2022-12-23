@@ -16,7 +16,6 @@ public class CalculateSum {
       list.add(i+1);
     }
 
-    System.out.println(list);
     int total = sum(list);
     System.out.println(total);
   }
