@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class FileDelimitedCsv {
 
   public static void main(String[] args) throws IOException {
-    String filename = "src/main/resources/DataTradeClients.csv";
+    String filename = "src/main/resources/DataTradeClientsu.csv";
     String line;
     int count = 0;
     boolean b = true;
@@ -28,10 +28,12 @@ public class FileDelimitedCsv {
       b = false;
     }
 
-    while (inputFile.hasNext() && b == true) {
-      line = inputFile.next();
-      System.out.println(line);
-      count++;
+    if (b) {
+      while (inputFile.hasNext() && b == true) {
+        line = inputFile.next();
+        System.out.println(line);
+        count++;
+      }
     }
 
     if (b) { inputFile.close(); }
