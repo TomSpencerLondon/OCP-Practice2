@@ -11,7 +11,7 @@ public class Exceptions {
       result = larger /smaller;
       System.out.println("Line 13 ");
     } catch (Exception e) {
-      System.out.println("Error found");
+      System.out.println("Error found " + e);
     }
 
     System.out.println("the end");
