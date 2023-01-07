@@ -23,6 +23,8 @@ public class ByteStreamPractice {
         out.write(c);
         System.out.println(c + "\t" + (char) c);
       }
+      in.close();
+      out.close();
     } catch (FileNotFoundException e) {
       throw new RuntimeException(e);
     } catch (IOException e) {
