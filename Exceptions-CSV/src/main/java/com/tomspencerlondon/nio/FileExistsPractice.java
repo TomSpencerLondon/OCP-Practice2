@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.UserPrincipal;
 
 public class FileExistsPractice {
@@ -42,5 +44,20 @@ public class FileExistsPractice {
         System.out.println("Path parent " + path2.getParent());
 
         System.out.println("Path root " + path2.getRoot());
+
+        String filename3 = "src/main/resources/testOut5.csv";
+        Path source1 = Paths.get(filename3);
+
+        Path target = Paths.get("src/main/resources/testOutCopied.csv");
+        BasicFileAttributes attrs;
+        try {
+            Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
+
+            attrs = Files.readAttributes(target, BasicFileAttributes.class);
+
+            System.out.println("after copy " + attrs.creationTime() + " " + attrs.lastModifiedTime());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
