@@ -27,5 +27,20 @@ public class FileExistsPractice {
         long size = Files.size(source);
 
         System.out.println(size);
+
+        String projectFolder = System.getProperty("user.dir");
+        System.out.println("The project folder directory is  " + projectFolder);
+        Path path = Paths.get(projectFolder);
+        System.out.println("path.toAbsolutePath() " + path.toAbsolutePath());
+
+        String filename2 = "src/main/resources/testOut5.csv";
+        Path path2 = Paths.get(filename2);
+        System.out.println("Path 2: " + path2);
+
+        System.out.println("Path to absolute path " + path2.toAbsolutePath());
+
+        System.out.println("Path parent " + path2.getParent());
+
+        System.out.println("Path root " + path2.getRoot());
     }
 }
