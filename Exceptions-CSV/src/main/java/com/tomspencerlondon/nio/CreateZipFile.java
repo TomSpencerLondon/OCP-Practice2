@@ -20,7 +20,6 @@ public class CreateZipFile {
         try {
             zipOutputStream.putNextEntry(zipEntry);
             byte[] buffer = new byte[1024];
-            int len;
             while ((fileInputStream.read(buffer)) > 0) {
                 zipOutputStream.write(buffer);
             }
