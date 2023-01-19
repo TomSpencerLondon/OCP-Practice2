@@ -21,7 +21,7 @@ public class UnzipFile {
                 fileOutputStream = new FileOutputStream("src/main/resources/other/example.csv");
                 int size = 0;
 
-                while ((size = zipInputStream.read()) != -1) {
+                while ((size = zipInputStream.read(bytes)) != -1) {
                     fileOutputStream.write(bytes, 0, size);
                 }
 
