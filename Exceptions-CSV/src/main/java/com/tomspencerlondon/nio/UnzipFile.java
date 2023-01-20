@@ -10,13 +10,12 @@ public class UnzipFile {
         FileInputStream fileInputStream = null;
         FileOutputStream fileOutputStream = null;
         ZipInputStream zipInputStream = null;
-        ZipEntry zipEntry = null;
 
         try {
             fileInputStream = new FileInputStream("src/main/resources/other/data.zip");
             zipInputStream = new ZipInputStream(new BufferedInputStream(fileInputStream));
 
-            while ((zipEntry = zipInputStream.getNextEntry()) != null) {
+            while (zipInputStream.getNextEntry() != null) {
                 byte[] bytes = new byte[1024];
                 fileOutputStream = new FileOutputStream("src/main/resources/other/example.csv");
                 int size = 0;
